@@ -19,3 +19,10 @@
 .div_error p {
   font-size: 14px;
 }
+
+.editIcon {
+  padding: 0;
+  margin: 0;
+  height: 1.2rem;
+  width: 1.2rem;
+}
