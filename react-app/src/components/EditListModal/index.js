@@ -11,7 +11,6 @@ function EditListModal({ title, id }) {
   return (
     <>
       <Button variant="Light" className={styles.editBtn} onClick={() => setShowModal(true)}>
-        {/* <i className="far fa-edit"></i> */}
         <ReactSVG src={editIcon} wrapper="svg" className={styles.editIcon} />
       </Button>
       {showModal && (

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { ReactSVG } from "react-svg";
 import { Modal } from "../../context/Modal";
 import NewListForm from "./NewListForm";
 import styles from "./ListForm.module.css";
+import plusIcon from "../../images/icons/font-awesome/plus-solid.svg";
 
 function ListModal() {
   const [showModal, setShowModal] = useState(false);
@@ -9,7 +11,7 @@ function ListModal() {
   return (
     <>
       <button variant="light" className={styles.addBtn} onClick={() => setShowModal(true)}>
-        <i className={`fas fa-plus`}></i>
+        <ReactSVG src={plusIcon} wrapper="svg" className={styles.plusIcon} />
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>

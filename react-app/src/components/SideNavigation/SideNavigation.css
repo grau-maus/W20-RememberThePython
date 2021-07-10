@@ -16,3 +16,10 @@
 .SideNavigation_tabContainer__3nUod::-webkit-scrollbar {
   display: none;
 }
+
+.trash-icon {
+  padding: 0;
+  margin: 0;
+  height: 1.2rem;
+  width: 1.2rem;
+}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ReactSVG } from "react-svg";
 import { useSelector, useDispatch } from "react-redux";
 import { Nav, Button, Tab, Col, Row } from "react-bootstrap";
 import { getAllLists, deleteList } from "../../store/lists";
@@ -15,6 +16,7 @@ import { searchDateQuery } from "../../store/search";
 
 import styles from "./SideNavigation.module.css";
 import "./SideNavigation.css";
+import trashIcon from "../../images/icons/font-awesome/trash-alt-regular.svg";
 
 const SideNavigation = () => {
 	const dispatch = useDispatch();
@@ -138,7 +140,7 @@ const SideNavigation = () => {
 										<EditListModal title={lis.title} id={lis.id} />
 									</div>
 									<Button id={lis.id} onClick={handleDelete} className={`${styles.deleteBtn}`}>
-										<i id={lis.id} className="far fa-trash-alt"></i>
+										<ReactSVG src={trashIcon} wrapper="svg" id={`trash-${lis.id}`} className={"trash-icon"} />
 									</Button>
 								</Nav.Item>
 							))}
