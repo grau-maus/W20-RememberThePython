@@ -1,10 +1,12 @@
 import React from "react";
+import { ReactSVG } from "react-svg";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import { Dropdown } from "react-bootstrap";
 
 import "./Navigation.css";
+import cogIcon from "../../images/icons/font-awesome/cog-solid.svg";
 
 function ProfileButton({ user }) {
 	const dispatch = useDispatch();
@@ -40,7 +42,8 @@ function ProfileButton({ user }) {
 		<>
 			<Dropdown align="end">
 				<Dropdown.Toggle variant="primary" id="profile-dropdown">
-					<i className="fas fa-cog" />
+					{/* <i className="fas fa-cog" /> */}
+					<ReactSVG src={cogIcon} wrapper="svg" id="cog-icon" />
 				</Dropdown.Toggle>
 				<div id="profile-menu">
 					<Dropdown.Menu>
