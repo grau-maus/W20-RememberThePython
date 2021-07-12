@@ -22,3 +22,11 @@
 .toast-small-header {
 	margin: 5px;
 }
+
+#quick-look-checkbox {
+  padding: 0;
+  margin: 0;
+	margin-top: -3.8px;
+  height: 1.2rem;
+  width: 1.2rem;
+}

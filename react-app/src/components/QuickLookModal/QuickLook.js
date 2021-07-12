@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { ReactSVG } from "react-svg";
 // import { useHistory } from "react-router-dom";
 import * as taskActions from "../../store/tasks";
 // import * as listActions from "../../store/lists";
 import { useDispatch, useSelector } from "react-redux";
-import "./QuickLook.css";
 import { Toast } from "react-bootstrap";
+import "./QuickLook.css";
+import quickCheckbox from "../../images/icons/font-awesome/check-square-solid.svg";
 
 const QuickLook = ({ listId }) => {
 	const dispatch = useDispatch();
@@ -42,7 +44,8 @@ const QuickLook = ({ listId }) => {
 						<small className="toast-small-header">{`Due Date: ${task.dueDate ? task.dueDate : "None"}`}</small>
 						<small className="toast-small-header">{`Completed: ${task.completed}`}</small>
 						<button onClick={() => complete(task.id)} className="quick-look__complete">
-							<i className="fas fa-check-square"></i>
+							{/* <i className="fas fa-check-square"></i> */}
+							<ReactSVG src={quickCheckbox} wrapper="svg" id="quick-look-checkbox" />
 						</button>
 					</Toast.Header>
 					<Toast.Body>{`${task.content}`}</Toast.Body>
