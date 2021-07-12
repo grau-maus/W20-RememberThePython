@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { ReactSVG } from "react-svg";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Nav, Navbar, Button } from "react-bootstrap";
-
 import ProfileButton from "./ProfileButton";
 import LoginFormModal from "../LoginFormModal";
 import SignUpModal from "../SignUpModal";
@@ -10,6 +10,7 @@ import * as sessionActions from "../../store/session";
 import { searchQuery } from "../../store/search";
 
 import "./Navigation.css";
+import searchIcon from "../../images/icons/font-awesome/search-solid.svg";
 
 const Navigation = () => {
 	const dispatch = useDispatch();
@@ -42,7 +43,8 @@ const Navigation = () => {
 
 		searchBar = (
 			<form className="nav-search-bar" onSubmit={handleSearch}>
-				<i className="fas fa-search"></i>
+				{/* <i className="fas fa-search"></i> */}
+				<ReactSVG src={searchIcon} wrapper="svg" id="search-icon" />
 				<input id="search-bar" type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
 			</form>
 		);
