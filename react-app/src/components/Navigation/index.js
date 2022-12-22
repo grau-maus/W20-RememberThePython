@@ -31,7 +31,7 @@ const Navigation = () => {
         const data = await dispatch(
           sessionActions.login({
             credential: "demoUser@user.io",
-            password: "passwords",
+            password: "password",
           })
         );
 
